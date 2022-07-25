@@ -1,8 +1,11 @@
 package employee_linked_list;
 
+import java.util.LinkedList;
+
 public class EmployeeNode {
     private Employee employee;
     private EmployeeNode next;
+
 
     public EmployeeNode(Employee employee){
         this.employee = employee;
