@@ -1,17 +1,14 @@
 import java.math.BigInteger;
+import java.util.Random;
 
 public class ExtraLongFactorial {
     public static void main(String[] args) {
-        System.out.println(extraLongFactorials(5));
 
-    }
-    public static BigInteger extraLongFactorials(int n) {
-        BigInteger result = BigInteger.ONE;
-        // Write your code here
-        if(n < 2){
-            return BigInteger.ONE;
-        }
-        result = BigInteger.valueOf(n).multiply(extraLongFactorials(n-1));
-        return result;
+        Random random = new Random();
+
+        int i = 2;
+
+        int k = random.nextInt(i+4);
+        System.out.println(k);
     }
 }
