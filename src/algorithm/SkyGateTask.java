@@ -16,7 +16,7 @@ public class SkyGateTask {
             String resultFromStudent = execute(student);
             finalResult.append(resultFromStudent).append(";");
         }
-        return finalResult.substring(0,finalResult.length()-1);
+        return finalResult.toString();
 
     }
     private static String execute(String student){
