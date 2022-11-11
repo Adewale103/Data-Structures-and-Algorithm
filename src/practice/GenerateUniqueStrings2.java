@@ -1,5 +1,8 @@
 package practice;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class GenerateUniqueStrings2 {
@@ -22,7 +25,7 @@ public class GenerateUniqueStrings2 {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         List<String> totalResult = new ArrayList<>();
         String chars = "a,b,c,d,f,g,h,j";
         String[] database = chars.split(",");
@@ -33,7 +36,7 @@ public class GenerateUniqueStrings2 {
         }
         int minimumLength = 2;
         int maximumLength = 7;
-        int expectedNumberOfStrings = 150000;
+        int expectedNumberOfStrings = 5000;
         int sum = 0;
         if(minimumLength < 1){
             throw  new RuntimeException("The minimum length can not be less than 1");
@@ -50,8 +53,17 @@ public class GenerateUniqueStrings2 {
             List<String> result = getAllLists(database, i);
             totalResult.addAll(result);
         }
+        BufferedWriter out = null;
         for (int i = 0; i < expectedNumberOfStrings; i++) {
-            System.out.println(totalResult.get(i));
+            try {
+                FileWriter fstream = new FileWriter("text.txt", true);
+                out = new BufferedWriter(fstream);
+                out.write(totalResult.get(i));
+                out.newLine();
+                out.close();
+            } catch (IOException exception) {
+                System.out.println(exception.getMessage());
+            }
         }
     }
 }

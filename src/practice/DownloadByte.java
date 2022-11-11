@@ -1,5 +1,7 @@
 package practice;
 
+import java.io.File;
+
 public class DownloadByte {
 
 //    public static int solution(int x, int[] b, int z){
@@ -8,4 +10,8 @@ public class DownloadByte {
 ////
 ////        }
 //    }
+public static void main(String[] args) {
+  File file = new File("");
+    System.out.println(file.getAbsolutePath());
+}
 }
