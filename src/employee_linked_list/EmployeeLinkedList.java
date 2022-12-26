@@ -1,10 +1,5 @@
 package employee_linked_list;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;

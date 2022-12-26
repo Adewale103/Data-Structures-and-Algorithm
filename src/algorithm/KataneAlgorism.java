@@ -1,7 +1,6 @@
 package algorithm;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class KataneAlgorism {
     public static void main(String[] args) {
@@ -27,7 +26,6 @@ public class KataneAlgorism {
         }
         if(bowl.isEmpty()){
             return -1;
-
         }
         return bowl.stream().toList().get(0);
     }

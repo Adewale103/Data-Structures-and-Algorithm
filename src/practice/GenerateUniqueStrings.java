@@ -1,5 +1,6 @@
 package practice;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -40,11 +41,13 @@ public class GenerateUniqueStrings {
 //    }
 static int count = 0;
 public static void main(String[] args) {
-
-    String[] elements = {"a", "b", "c"};
-    int maxLength = 5;
-    combineStringFromElements(elements, "", maxLength);
-    System.out.println(count);
+    File file = new File("");
+    String  x=  file.getAbsolutePath();
+    System.out.println(x);
+//    String[] elements = {"a", "b", "c"};
+//    int maxLength = 5;
+//    combineStringFromElements(elements, "", maxLength);
+//    System.out.println(count);
 }
 
     private static void combineStringFromElements(String[] elements, String currentString, int maxLength) {
