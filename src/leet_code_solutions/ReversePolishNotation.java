@@ -16,25 +16,28 @@ public class ReversePolishNotation {
         System.out.println(result);
     }
     public static int reversePolishNotation(String[] token){
-        String operators = "*+/-";
-        Stack<String> stack = new Stack<>();
-        for(String each : token){
-            if(!operators.contains(each)){
-                stack.push(each);
-            }
-            else{
+      String identifiers = "-+/*";
+      Stack<String> stack = new Stack<>();
+        for (String value : token) {
+            if (!identifiers.contains(value)) {
+                stack.push(value);
+            } else {
+                System.out.println(stack.peek());
                 int a = Integer.parseInt(stack.pop());
+                System.out.println(stack.peek());
                 int b = Integer.parseInt(stack.pop());
-                int index = operators.indexOf(each);
+                int index = identifiers.indexOf(value);
+                System.out.println(value);
+
                 switch (index) {
-                    case 0 -> stack.push(String.valueOf(a * b));
-                    case 1 -> stack.push(String.valueOf(a + b));
+                    case 0 -> stack.push(String.valueOf(b - a));
+                    case 1 -> stack.push(String.valueOf(b + a));
                     case 2 -> stack.push(String.valueOf(b / a));
-                    case 3 -> stack.push(String.valueOf(b - a));
+                    case 3 -> stack.push(String.valueOf(b * a));
                 }
 
             }
         }
-        return Integer.parseInt(stack.pop());
+       return Integer.parseInt(stack.pop());
     }
 }

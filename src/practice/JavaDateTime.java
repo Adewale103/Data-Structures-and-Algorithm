@@ -6,7 +6,7 @@ import java.util.Calendar;
 
 public class JavaDateTime {
     public static void main(String[] args) {
-        System.out.println(findDay(8,5,2015));
+        System.out.println(findDay(1,6,2023));
 
     }
     public static String findDay(int month, int day, int year){

@@ -1,6 +1,6 @@
 package grokkings_exercises;
 
-public class BinarySort {
+public class BinarySearch {
     public static void main(String[] args) {
         int[] array = {2,5,7,13,45,67,89};
         System.out.println(binarySearch(array,45));

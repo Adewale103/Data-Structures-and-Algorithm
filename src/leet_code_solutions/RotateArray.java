@@ -9,18 +9,22 @@ public class RotateArray {
         System.out.println(Arrays.toString(array));
 
     }
-    public static void rotateArray(int[] array, int k){
-        reverse(array,0,array.length-k-1);
+
+    private static void rotateArray(int[] array, int k) {
+        reverse(array, 0,array.length-1-k);
         reverse(array, array.length-k, array.length-1);
-        reverse(array,0, array.length-1);
+        reverse(array, 0, array.length-1);
     }
-    public static  void reverse(int[] array, int left, int right){
+
+    private static void reverse(int[] array, int left, int right) {
         while(left < right){
-            int temp = array[right];
-            array[right] = array[left];
-            array[left] = temp;
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
             left++;
             right--;
         }
     }
+
+
 }
