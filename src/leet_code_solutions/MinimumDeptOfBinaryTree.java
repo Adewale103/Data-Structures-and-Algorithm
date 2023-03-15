@@ -1,7 +1,13 @@
 package leet_code_solutions;
 
+import javax.swing.tree.TreeNode;
+import java.util.LinkedList;
+
 public class MinimumDeptOfBinaryTree {
-    public class Solution {
+    int val;
+
+    TreeNode left;
+    TreeNode right;
         public int minDepth(TreeNode root) {
             if(root == null){
                 return 0;
@@ -13,7 +19,6 @@ public class MinimumDeptOfBinaryTree {
             while(!nodes.isEmpty()){
                 TreeNode curr = nodes.remove();
                 int count = counts.remove();
-                if(curr.left != null){
                     nodes.add(curr.left);
                     counts.add(count+1);
                 }
