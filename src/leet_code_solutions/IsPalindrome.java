@@ -8,7 +8,7 @@ public class IsPalindrome {
         int len = s.length();
         if (len < 2)
             return true;
-        Stack<Character> stack = new Stack<Character>();
+        oStack<Character> stack = new Stack<Character>();
         int index = 0;
         while (index < len / 2) {
             stack.push(s.charAt(index));
